@@ -1,6 +1,5 @@
-import * as THREE from '../node_modules/three/build/three.module.js';
-import { OrbitControls } from '../node_modules/three/examples/jsm/controls/OrbitControls.js';
-// import gsap from "../node_modules/gsap/src/all.js";
+import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { Timer } from "./Timer.js";
 import { Song } from "./audio.js";
 import { bindChangeEvent } from "./input.js";
