@@ -229,8 +229,6 @@ const render = function (deltaTime) {
         allowMouse = true;
     }
 
-    // console.log(camera.position)
-
     if (audioAnalyser) {
         renderBars(scene, audioAnalyser);
         if (deltaAccumulator > 2.2) {
