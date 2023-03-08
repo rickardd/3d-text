@@ -1,18 +1,16 @@
 {
-  "name": "3dblocks",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "3d-text-hnry",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "start": "http-server ."
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "gsap": "^3.2.6",
-    "three": "^0.115.0"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "devDependencies": {
-    "http-server": "^0.12.1"
+    "vite": "^4.1.0",
+    "gsap": "^3.2.6",
+    "three": "^0.115.0"
   }
 }
