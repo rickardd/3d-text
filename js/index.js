@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import fontBold from 'three/examples/fonts/helvetiker_bold.typeface.json';
 import { Timer } from "./Timer.js";
 import { Song } from "./audio.js";
 import { bindChangeEvent } from "./input.js";
@@ -61,7 +62,7 @@ renderer.shadowMap.type = THREE.PCFShadowMap;
 
 setBars(scene);
 
-const textPromise = setText('three/examples/fonts/helvetiker_bold.typeface.json', scene);
+const textPromise = setText(fontBold, scene);
 
 const barLight1 = new THREE.SpotLight('yellow', 2, 1000);
 const barLight2 = new THREE.SpotLight('yellow', 2, 1000);
