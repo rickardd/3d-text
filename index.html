@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Somar in 3D</title>
+    <script type="module" src="/js/index.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        canvas {
+            display: block;
+        }
+
+        #song-selector {
+            z-index: 1000;
+            position: absolute;
+            bottom: -30px;
+            left: 0;
+        }
+
+        #mouse-control,
+        #song-selector-message {
+            display: none;
+            padding: 6px;
+            color: #fff;
+            background-color: black;
+            position: fixed;
+            bottom: 5px;
+            right: 50px;
+            font-family: monospace;
+            font-size: 18px;
+        }
+
+        #song-selector-message {
+            top: 5px;
+            left: 50px;
+            height: auto;
+            width: auto;
+            right: auto;
+            bottom: auto;
+        }
+
+        #container {
+            /* display: none; */
+            color: #fff;
+            background-color: black;
+            position: fixed;
+            bottom: 5px;
+            right: 50px;
+            font-family: monospace;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 10000;
+        }
+
+        #intro,
+        #teaser {
+            padding: 48px;
+            border: 1px solid white;
+            text-align: center;
+            user-select: none;
+        }
+
+        #teaser {
+            display: none;
+        }
+
+        #hole {
+            background-color: #000;
+            border: 1px solid white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: fixed;
+            top: 100px;
+            right: 100px;
+            transition: all .3s ease;
+        }
+
+        #ball {
+            background-color: #fff;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            position: fixed;
+            bottom: 100px;
+            left: 100px;
+            z-index: 900000;
+        }
+
+        #ball:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="mouse-control">Use your mouse to navigate</div>
+    <div id="song-selector-message">
+        <span>Select new song</span>
+
+        <select name="song-selector" id="song-selector">
+            <option value="">--select song--</option>
+            <option value="I-still-do.mp3">I Still Do</option>
+            <option value="otherside.mp3">Otherside</option>
+            <option value="angel.mp3">Angel</option>
+            <option value="road-trippin.mp3">Road Trippin</option>
+            <option value="californication.mp3">Californication</option>
+            <option value="teardrop.mp3">Teardrop</option>
+            <option value="getto.mp3">Getto</option>
+            <option value="under-the-bridge.mp3">Under The Bridge</option>
+            <option value="heartbeat.mp3">Heartbeat</option>
+            <option value="you-make-me-like-charity.mp3">You Make Me Like Charity</option>
+            <option value="hey-lover.mp3">Hey Lover</option>
+            <option value="you-take-my-breath-away.mp3">You Take My Breath Away</option>
+        </select>
+    </div>
+
+
+    <div id="container">
+
+        <div id="intro">
+            <p>Thank ya'll for a great time at Somar.</p>
+            <p>Put your headphones on, pump up the volume and ensure your browser is in full screen mode.</p>
+            <p><small>And if you are a developer... turn of the damn dev tools.</small></p>
+            <button id="next-button">Next</button>
+        </div>
+
+        <div id="teaser">
+            <p>To get started, put the ball in the hole.</p>
+
+            <div id="ball"></div>
+            <div id="hole"></div>
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>
