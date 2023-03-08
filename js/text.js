@@ -14,7 +14,7 @@ export function setText(path, scene) {
                 curveSegments: 20,
             };
 
-            const somarLetters = [
+            const hnryLetters = [
                 { letter: "H", name: "text-s", pos: { x: 1 } },
                 { letter: "E", name: "text-o", pos: { x: 10 } },
                 { letter: "N", name: "text-m", pos: { x: 21 } },
@@ -22,7 +22,7 @@ export function setText(path, scene) {
                 { letter: "Y", name: "text-r", pos: { x: 43 } },
             ]
 
-            somarLetters.forEach(letter => {
+            hnryLetters.forEach(letter => {
                 const txtGeometry = new THREE.TextGeometry(letter.letter, fontSettings);
                 const txtMaterial = new THREE.MeshLambertMaterial({ color: 0xaa1c2d });
                 const txtMesh = new THREE.Mesh(txtGeometry, txtMaterial);
