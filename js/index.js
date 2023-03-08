@@ -62,7 +62,7 @@ renderer.shadowMap.type = THREE.PCFShadowMap;
 
 setBars(scene);
 
-const textPromise = setText('public/helvetiker_bold.typeface.json', scene);
+const textPromise = setText('helvetiker_bold.typeface.json', scene);
 
 const barLight1 = new THREE.SpotLight('yellow', 2, 1000);
 const barLight2 = new THREE.SpotLight('yellow', 2, 1000);
