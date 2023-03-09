@@ -16,7 +16,7 @@ export function setText(path, scene) {
 
             const hnryLetters = [
                 { letter: "H", name: "text-s", pos: { x: 1 } },
-                { letter: "E", name: "text-o", pos: { x: 10 } },
+                { letter: "E", name: "text-o", pos: { x: 11 } },
                 { letter: "N", name: "text-m", pos: { x: 21 } },
                 { letter: "R", name: "text-a", pos: { x: 32 } },
                 { letter: "Y", name: "text-r", pos: { x: 43 } },
