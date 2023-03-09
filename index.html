@@ -18,6 +18,10 @@
             display: block;
         }
 
+        button:hover {
+            cursor: pointer;
+        }
+
         #song-selector {
             z-index: 1000;
             position: absolute;
@@ -66,44 +70,14 @@
             z-index: 10000;
         }
 
-        #intro,
-        #teaser {
+        #intro {
             padding: 48px;
             border: 1px solid white;
             text-align: center;
             user-select: none;
         }
 
-        #teaser {
-            display: none;
-        }
-
-        #hole {
-            background-color: #000;
-            border: 1px solid white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            position: fixed;
-            top: 100px;
-            right: 100px;
-            transition: all .3s ease;
-        }
-
-        #ball {
-            background-color: #fff;
-            width: 18px;
-            height: 18px;
-            border-radius: 50%;
-            position: fixed;
-            bottom: 100px;
-            left: 100px;
-            z-index: 900000;
-        }
-
-        #ball:hover {
-            cursor: pointer;
-        }
+        
     </style>
 </head>
 
@@ -130,23 +104,13 @@
         </select>
     </div>
 
-
     <div id="container">
-
         <div id="intro">
             <p>Thank ya'll for a great time at Hnry.</p>
             <p>Put your headphones on, pump up the volume and ensure your browser is in full screen mode.</p>
-            <p><small>And if you are a developer... turn of the dev tools.</small></p>
+            <p><small>... And for developers, please turn of the dev tools ;)</small></p>
             <button id="next-button">Next</button>
         </div>
-
-        <div id="teaser">
-            <p>To get started, put the ball in the hole.</p>
-
-            <div id="ball"></div>
-            <div id="hole"></div>
-        </div>
-
     </div>
 </body>
 
